@@ -1,0 +1,24 @@
+{
+    "MD033": {
+      "allowed_elements": [
+        "br",
+        "b",
+        "i",
+        "a",
+        "h2",
+        "h3",
+        "h4",
+        "img",
+        "div",
+        "details",
+        "summary",
+        "table",
+        "td",
+        "tr",
+        "th",
+        "kbd",
+        "abbr",
+        "code"
+      ]
+    }
+  }
