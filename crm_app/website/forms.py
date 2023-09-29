@@ -16,13 +16,6 @@ class SignUpForm(UserCreationForm):
         fields = ('username', 'password1',
                   'password2', 'email', 'display_name')
 
-    # username = forms.CharField(label="", max_length="12", widget=forms.TextInput(
-    #     attrs={'class': 'form-control', 'placeholder': 'Username'}), required=True)
-
-    # password1 = forms.CharField(label="", required=True)
-
-    # password2 = forms.CharField(label="", required=True)
-
     def __init__(self, *args, **kwargs):
         super(SignUpForm, self).__init__(*args, **kwargs)
 
