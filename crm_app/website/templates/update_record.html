@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Update Contact{% endblock title %}
+
+{% block content %}
+
+<div class="col-md-6 offset-md-3">
+
+<h1>Update Contact:</h1>
+<br>
+
+<form method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <br>
+    <button type="submit" class="btn btn-secondary">Update Contact</button>
+</form>
+
+</div>
+
+{% endblock content %}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Record{% endblock title %}
+
+{% block content %}
+
+<h1>Contact Record:</h1>
+<br>
+
+<div class="card">
+    <div class="card-header">
+        <h3>{{ contact_record.first_name }} {{ contact_record.last_name }}</h3>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+            <strong>Email:</strong><br>
+            {{ contact_record.email }}<br>
+            <br>
+            <strong>Phone:</strong><br>
+            {{ contact_record.phone }}<br>
+            <br>
+            <strong>Address:</strong><br>
+            {{ contact_record.address }}<br>
+            {{ contact_record.city }}, {{ contact_record.state }} {{ contact_record.zipcode }}<br>
+            <br>
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row align-items-start">
+        <div class="col">
+        Contact ID: {{ contact_record.id }}
+        </div>
+        <div class="col text-end">
+        Record created on: {{ contact_record.created_at }}<br>
+        Record updated on: {{ contact_record.updated_at }}
+        </div>
+    </div>
+</div>
+<br>
+
+<a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+
+<a href="{% url 'update_record' contact_record.id %}" class="btn btn-secondary">Update Contact Info</a>
+
+<a href="{% url 'delete_record' contact_record.id %}" class="btn btn-danger">Delete Contact</a>
+
+{% endblock content %}
